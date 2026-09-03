@@ -1,0 +1,3 @@
+import Provider from '../models/Provider.js';
+
+export async function rankProviders({ category, location, skills = [] }) { const providers = await Provider.find({ verified: true }); return providers.map(provider => { const skillScore = skills.filter(skill => provider.skills.includes(skill)).length; const categoryScore = provider.specialty?.toLowerCase().includes(category?.toLowerCase() || '') ? 2 : 0; const locationScore = provider.serviceAreas?.some(area => location?.includes(area)) ? 1 : 0; return { provider, score: skillScore + categoryScore + locationScore + (provider.rating || 0) / 5 }; }).sort((a, b) => b.score - a.score); }

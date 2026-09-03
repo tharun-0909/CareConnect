@@ -1,0 +1,52 @@
+:root {
+  --cc-darkest: #050b16;
+  --cc-dark-blue: #0b1930;
+  --cc-panel: #102544;
+  --cc-panel-soft: #153052;
+  --cc-line: #27466d;
+  --cc-text: #edf4ff;
+  --cc-muted-text: #9eb2cb;
+  --cc-accent: #46a6ff;
+  --cc-accent-strong: #1677d2;
+}
+
+body { background: var(--cc-darkest); }
+.role-shell { background: var(--cc-darkest); color: var(--cc-text); }
+.role-sidebar, .role-card { background: var(--cc-dark-blue); }
+.role-header { background: #081426; border-color: var(--cc-line); }
+.role-content { color: var(--cc-text); }
+.role-panel, .role-metric, .dialog, .auth-card { background: var(--cc-panel); border-color: var(--cc-line); color: var(--cc-text); }
+.role-panel h3, .role-intro h2, .role-header h1, .role-metric strong, .data-row strong { color: var(--cc-text); }
+.role-intro p, .panel-title p, .data-row small, .role-user span, .auth-card > p { color: var(--cc-muted-text); }
+.role-metric { color: var(--cc-accent); }
+.role-metric span { color: var(--cc-muted-text); }
+.role-primary { background: var(--cc-accent-strong); }
+.role-primary:hover { background: var(--cc-accent); }
+.role-link, .signout { color: var(--cc-muted-text); }
+.role-link:hover, .role-link.active, .signout:hover { background: var(--cc-panel-soft); color: #fff; }
+.role-link.active { box-shadow: inset 3px 0 var(--cc-accent); }
+.data-row { border-color: var(--cc-line); }
+.data-status { background: #123b5d; color: #8bd0ff; }
+.dialog-backdrop, .auth-page { background: #050b16; }
+.dialog input, .dialog select, .dialog textarea, .auth-card input, .auth-card select { background: #081426; border-color: var(--cc-line); color: var(--cc-text); }
+.accepted-request { background: #0b1d36; border: 1px solid var(--cc-accent); border-radius: 8px; padding: 18px; margin-top: 10px; }
+.accepted-provider { display: grid; gap: 3px; margin-top: 12px; padding: 12px; background: #16365c; border-left: 4px solid var(--cc-accent); border-radius: 5px; }
+.accepted-provider strong { color: #8bd0ff; font-size: 11px; }
+.accepted-provider span { color: #fff; font-size: 18px; font-weight: 700; }
+.accept-button { min-width: 170px; min-height: 50px; font-size: 14px; box-shadow: 0 8px 20px #02071266; }
+.notification-actions { display: flex; gap: 10px; align-items: center; }
+.reject-button { min-height: 50px; padding: 11px 18px; border: 1px solid #8b3f50; border-radius: 6px; background: #321a2a; color: #ffb3c1; font-weight: 700; }
+.reject-button:hover { background: #512438; color: #fff; }
+.request-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.complete-button { min-height: 42px; padding: 9px 14px; border: 1px solid #3c78a9; border-radius: 6px; background: #123b5d; color: #b9ddff; font-size: 11px; font-weight: 700; }
+.complete-button:hover { background: #1b5987; color: #fff; }
+.service-map-wrap { width: 50vw; margin: 16px 0 0; overflow: hidden; border: 1px solid var(--cc-line); border-radius: 8px; background: #081426; }
+.accepted-request > div:first-child { flex: 1 1 auto; min-width: 0; }
+.service-map-wrap { flex-shrink: 0; max-width: none; }
+.service-map-wrap .leaflet-container { width: 100%; height: 430px; background: #102544; }
+.map-caption { display: flex; justify-content: space-between; gap: 12px; padding: 9px 12px; color: #c5dcf5; font-size: 11px; }
+.map-caption span { color: #ffcf8a; }
+.empty-map { margin-top: 14px; padding: 14px; border: 1px dashed var(--cc-line); border-radius: 6px; color: var(--cc-muted-text); font-size: 11px; }
+.dashboard-photo { width: 190px; height: 105px; object-fit: cover; border: 1px solid var(--cc-line); border-radius: 8px; opacity: .9; box-shadow: 0 8px 24px #02071266; }
+.bike-marker { display: grid; place-items: center; width: 40px !important; height: 40px !important; border: 2px solid #fff; border-radius: 50%; background: #1677d2; color: #fff; font-size: 21px; box-shadow: 0 3px 12px #02071299; }
+@media (max-width: 700px) { .notification-row { align-items: stretch; flex-direction: column; } .accept-button { width: 100%; } .dashboard-photo { width: 100%; height: 150px; margin-top: 18px; } .service-map-wrap .leaflet-container { height: 340px; } }

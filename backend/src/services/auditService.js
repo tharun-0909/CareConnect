@@ -1,0 +1,1 @@
+export async function recordAudit({ actor, action, resource, resourceId, metadata = {} }) { console.log(JSON.stringify({ actor, action, resource, resourceId, metadata, createdAt: new Date().toISOString() })); }

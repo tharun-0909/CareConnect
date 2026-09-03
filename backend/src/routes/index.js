@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import authRoutes from './authRoutes.js';
+import providerRoutes from './providerRoutes.js';
+import requestRoutes from './requestRoutes.js';
+import userRoutes from './userRoutes.js';
+import analyticsRoutes from './analyticsRoutes.js';
+import notificationRoutes from './notificationRoutes.js';
+const router = Router();
+router.use('/auth', authRoutes); router.use('/providers', providerRoutes); router.use('/requests', requestRoutes); router.use('/users', userRoutes); router.use('/analytics', analyticsRoutes); router.use('/notifications', notificationRoutes);
+export default router;
