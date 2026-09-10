@@ -6,7 +6,7 @@ import apiRoutes from './routes/index.js';
 import { errorHandler, notFound } from './middleware/errorHandler.js';
 
 const app = express();
-const allowedOrigins = new Set(['https://care-connect-gilt-ten.vercel.app',config.clientUrl, 'http://localhost:5173', 'http://localhost:5174', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174']);
+const allowedOrigins = new Set(['https://care-connect-gilt-ten.vercel.app',config.clientUrl, 'http://localhost:5173', 'http://localhost:5174', 'http://127.0.0.1:5173', 'http://127.0.0.1:5174', 'https://careconnect-znhy.onrender.com']);
 app.use(cors({ origin: (origin, callback) => !origin || allowedOrigins.has(origin) ? callback(null, true) : callback(new Error('Origin not allowed by CareConnect API')) }));
 app.use(express.json({ limit: '2mb' }));
 app.get('/api/health', (_, res) => res.json({ ok: true, service: 'CareConnect API' }));
