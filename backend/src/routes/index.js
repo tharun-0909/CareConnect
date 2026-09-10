@@ -5,6 +5,7 @@ import requestRoutes from './requestRoutes.js';
 import userRoutes from './userRoutes.js';
 import analyticsRoutes from './analyticsRoutes.js';
 import notificationRoutes from './notificationRoutes.js';
+import reviewRoutes from './reviewRoutes.js';
 const router = Router();
-router.use('/auth', authRoutes); router.use('/providers', providerRoutes); router.use('/requests', requestRoutes); router.use('/users', userRoutes); router.use('/analytics', analyticsRoutes); router.use('/notifications', notificationRoutes);
+router.use('/auth', authRoutes); router.use('/providers', providerRoutes); router.use('/requests', requestRoutes); router.use('/users', userRoutes); router.use('/analytics', analyticsRoutes); router.use('/notifications', notificationRoutes); router.use('/reviews', reviewRoutes);
 export default router;

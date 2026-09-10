@@ -49,4 +49,57 @@ body { background: var(--cc-darkest); }
 .empty-map { margin-top: 14px; padding: 14px; border: 1px dashed var(--cc-line); border-radius: 6px; color: var(--cc-muted-text); font-size: 11px; }
 .dashboard-photo { width: 190px; height: 105px; object-fit: cover; border: 1px solid var(--cc-line); border-radius: 8px; opacity: .9; box-shadow: 0 8px 24px #02071266; }
 .bike-marker { display: grid; place-items: center; width: 40px !important; height: 40px !important; border: 2px solid #fff; border-radius: 50%; background: #1677d2; color: #fff; font-size: 21px; box-shadow: 0 3px 12px #02071299; }
+.home-marker { display: grid; place-items: center; width: 30px !important; height: 30px !important; border: 2px solid #fff; border-radius: 50%; background: #123b5d; box-shadow: 0 3px 12px #02071299; }
+.home-marker svg { width: 22px; height: 22px; }
+.provider-marker { display: grid; place-items: center; width: 34px !important; height: 34px !important; filter: drop-shadow(0 3px 8px #02071299); }
 @media (max-width: 700px) { .notification-row { align-items: stretch; flex-direction: column; } .accept-button { width: 100%; } .dashboard-photo { width: 100%; height: 150px; margin-top: 18px; } .service-map-wrap .leaflet-container { height: 340px; } }
+
+/* Larger dashboard typography for user and service-provider workspaces */
+.role-card strong { font-size: 15px; }
+.role-card small { font-size: 12.5px; }
+.role-user { font-size: 15px; }
+.role-user span { font-size: 12px; }
+.role-header h1 { font-size: 26px; }
+.role-kicker, .role-label { font-size: 12px; }
+.role-link, .signout { font-size: 14px; }
+.role-panel h3 { font-size: 19px; }
+.role-intro h2 { font-size: 34px; }
+.role-intro p, .panel-title p { font-size: 15px; }
+.role-metric svg { width: 24px; height: 24px; }
+.role-metric span { font-size: 14px; }
+.role-metric strong { font-size: 28px; }
+.data-row strong { font-size: 16px; }
+.data-row small { font-size: 13.5px; line-height: 1.55; }
+.data-status { font-size: 13px; padding: 6px 12px; border-radius: 6px; }
+.accepted-provider strong { font-size: 14px; }
+.accepted-provider span { font-size: 21px; }
+.accepted-provider small { font-size: 14px; line-height: 1.55; }
+.notification-row strong { font-size: 16px; }
+.notification-row small { font-size: 13.5px; line-height: 1.5; }
+
+/* Comment / review UI */
+.comment-button { min-height: 42px; padding: 9px 16px; border: 1px solid #3c78a9; border-radius: 6px; background: #123b5d; color: #b9ddff; font-size: 12px; font-weight: 700; }
+.comment-button:hover { background: #1b5987; color: #fff; }
+.review-actions { display: flex; align-items: center; gap: 10px; }
+.review-row { border-left: 3px solid var(--cc-accent); padding-left: 14px; }
+.review-stars { color: #ffc65c; letter-spacing: 1px; font-size: 15px; }
+.review-provider { color: var(--cc-accent); font-size: 12.5px; }
+.review-meta { color: #7d96b5; font-size: 12px; }
+.dialog-label { display: block; font-size: 12.5px; font-weight: 700; color: #b7cfe8; margin: 4px 0 2px; }
+.dialog select { width: 100%; padding: 10px 12px; background: #081426; border: 1px solid var(--cc-line); border-radius: 6px; color: var(--cc-text); margin-bottom: 12px; font-size: 14px; }
+.dialog-note { font-size: 12px; color: var(--cc-muted-text); margin: 2px 0 14px; }
+.form-note { font-size: 12.5px; color: #ffcf8a; margin: 4px 0 10px; text-align: center; }
+.google-verify { display: grid; gap: 6px; margin: 4px 0 12px; }
+.google-button { border: 1px solid #5a86ad; border-radius: 6px; background: #16365c; color: #dceefa; padding: 11px 14px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.google-button:hover:not(:disabled) { background: #1d4a78; color: #fff; }
+.google-button:disabled { opacity: .75; cursor: default; }
+.role-primary:disabled { opacity: .45; cursor: not-allowed; pointer-events: none; }
+.google-status { font-size: 12px; color: var(--cc-muted-text); text-align: center; }
+.auth-divider { display: flex; align-items: center; gap: 10px; margin: 4px 0 12px; color: var(--cc-muted-text); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: var(--cc-line); }
+.email-live { margin: 2px 0 10px; }
+.email-ok { font-size: 12px; color: #7bd4a1; margin: 0; }
+.email-warn { font-size: 12px; color: #ffcf8a; margin: 0; }
+.email-error { font-size: 12px; color: #ff9d8c; margin: 0; }
+.email-exists { font-size: 12px; color: #ffd37a; margin: 0; font-weight: 600; }
+.email-checking { font-size: 12px; color: var(--cc-muted-text); margin: 0; }
